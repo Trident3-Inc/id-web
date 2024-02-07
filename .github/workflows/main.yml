@@ -1,0 +1,35 @@
+name: Deploy (Cloudfront)
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make Friendly URLs
+        run: for i in *.html; do cp -a $i ${i%%.html}; done; for i in **/*.html; do cp -a $i ${i%%.html}; done
+
+      - name: Sync to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete --exclude '.git/*' --exclude '.github/*'
+        env:
+          AWS_S3_BUCKET: ${{ secrets.LETT_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.LETT_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.LETT_SECRET_KEY_ID }}
+          
+      - name: Create Cloudfront Invalidation
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.LETT_CF_DISTRIBUTION }}
+          PATHS: "/*"
+          AWS_REGION: "us-east-1"
+          AWS_ACCESS_KEY_ID: ${{ secrets.LETT_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.LETT_SECRET_KEY_ID }}
