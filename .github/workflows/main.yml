@@ -20,7 +20,7 @@ jobs:
         env:
           AWS_S3_BUCKET: ${{ secrets.LETT_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.LETT_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.LETT_SECRET_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.LETT_SECRET_ACCESS_KEY }}
           
       - name: Create Cloudfront Invalidation
         uses: chetan/invalidate-cloudfront-action@v2
@@ -29,4 +29,4 @@ jobs:
           PATHS: "/*"
           AWS_REGION: "us-east-1"
           AWS_ACCESS_KEY_ID: ${{ secrets.LETT_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.LETT_SECRET_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.LETT_SECRET_ACCESS_KEY }}
