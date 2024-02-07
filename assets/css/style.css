@@ -157,3 +157,17 @@ html {
     background-color: #792323 !important;
     color: #fff !important;
 }
+
+.top {
+    width: 100%;
+    max-width: 1200px !important;
+    margin-bottom: -300px;
+}
+
+@media (max-width: 768px) {
+    .top {
+        width: 200% !important;
+        max-width: unset !important;
+        margin-left: -10vw;
+    }
+}
