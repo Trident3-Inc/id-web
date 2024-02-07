@@ -20,6 +20,7 @@ html {
     top: 50%;
     text-align: center;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
 }
 
@@ -42,6 +43,7 @@ html {
     background-color: transparent !important;
     display: inline-block;
     overflow: hidden;
+    width: 100%;
 }
 
 #mc_embed_signup .email {
@@ -73,6 +75,7 @@ html {
     display: inline-block;
     width: fit-content;
     height: 37px;
+    margin-left: -5px !important;
     margin: 10px 0;
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
@@ -121,7 +124,8 @@ html {
 }
 
 .mc-field-group {
-    display: inline-flex;
+    display: inline-block;
+    width: 100%;
 }
 
 #mc_embed_signup .response#mce-success-response {
