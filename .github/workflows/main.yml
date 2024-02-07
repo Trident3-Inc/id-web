@@ -13,9 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Make Friendly URLs
-        run: for i in *.html; do cp -a $i ${i%%.html}; done; for i in **/*.html; do cp -a $i ${i%%.html}; done
-
       - name: Sync to S3
         uses: jakejarvis/s3-sync-action@master
         with:
