@@ -51,6 +51,9 @@
 </template>
 
 <script>
+// @ts-ignore
+import Particles from './Particles.vue';
+
 export default {
   name: 'Hero',
   components: {
