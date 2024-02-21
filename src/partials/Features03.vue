@@ -18,9 +18,13 @@
       <div class="pt-16 pb-12 md:pt-32 md:pb-20 border-b border-slate-800">
 
         <!-- Section header -->
-        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-          <h2 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">More than a login box</h2>
-          <p class="text-lg text-slate-400">There are many variations available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+        <div class="max-w-4xl mx-auto text-center pb-8 md:pb-12">
+          <h2 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">More than just online</h2>
+          <p class="text-lg text-slate-400">
+            Use your T3id at supported venues with a tap of your phone or one of our limited edition cards.
+            <br>
+            As the future of universal identity, T3id is easy to integrate <b>anywhere</b>. No orbs required.
+          </p>
         </div>
 
         <div class="max-w-3xl mx-auto">
