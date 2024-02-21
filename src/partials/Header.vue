@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between h-16 md:h-20">
 
         <!-- Site branding -->
-        <div class="flex-1">
+        <div style="position: absolute">
           <!-- Logo -->
           <router-link class="inline-flex" to="/" aria-label="Cruip">
             <img class="max-w-none" src="../images/logo.svg" width="38" height="38" alt="Stellar">
@@ -20,34 +20,30 @@
               <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/about">About</router-link>
             </li>
             <li>
-              <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/integrations">Integrations</router-link>
+              <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/integrations">Blockchains</router-link>
             </li>
             <li>
-              <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/pricing">Pricing</router-link>
+              <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/pricing">Partners</router-link>
             </li>
             <li>
-              <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/customers">Customers</router-link>
-            </li>
-            <li>
-              <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/changelog">Changelog</router-link>
+              <router-link class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" to="/customers">Security</router-link>
             </li>
           </ul>
 
         </nav>
 
         <!-- Desktop sign in links -->
+        <!--
         <ul class="flex-1 flex justify-end items-center">
-          <li>
-            <router-link class="font-medium text-sm text-slate-300 hover:text-white whitespace-nowrap transition duration-150 ease-in-out" to="/signin">Sign in</router-link>
-          </li>
           <li class="ml-6">
             <router-link class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(theme(colors.slate.900),_theme(colors.slate.900))_padding-box,_conic-gradient(theme(colors.slate.400),_theme(colors.slate.700)_25%,_theme(colors.slate.700)_75%,_theme(colors.slate.400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" to="/signup">
               <span class="relative inline-flex items-center">
-                Sign up <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                Claim yours <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
               </span>
             </router-link>
           </li>
         </ul>
+        -->
 
         <!-- Mobile menu -->
         <div class="md:hidden flex items-center ml-4">
@@ -69,16 +65,13 @@
                 <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/about">About</router-link>
               </li>
               <li>
-                <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/integrations">Integrations</router-link>
+                <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/integrations">Blockchains</router-link>
               </li>
               <li>
-                <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/pricing">Pricing</router-link>
+                <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/pricing">Partners</router-link>
               </li>
               <li>
-                <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/customers">Customers</router-link>
-              </li>
-              <li>
-                <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/changelog">Changelog</router-link>
+                <router-link class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" to="/customers">Security</router-link>
               </li>
             </ul>
           </nav>
