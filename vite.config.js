@@ -6,7 +6,9 @@ export default defineConfig({
   define: {
     'process.env': process.env
   },
+  base: '/id-web/',
   plugins: [vue()],
+  root: './',
   resolve: {
     alias: [
       {
